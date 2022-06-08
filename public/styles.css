@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Oswald, sans-serif;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 32px;
+  color: #414f6b;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.container {
+  max-width: 960px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: white;
+  transition: all 0.2s ease-in;
+}
+
+header .logo-wrapper img:last-child {
+  opacity: 0;
+  transform: translateY(5px);
+  margin-left: 5px;
+  transition: all 0.2s ease-in;
+}
+
+header.scrolling {
+  background-color: white;
+  color: #414f6b;
+}
+
+header.scrolling .logo-wrapper img:last-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header-content {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  gap: 50px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: inherit;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+#hero h1 {
+  display: none;
+}
+
+#hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("images/hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.carousel {
+  background-color: #414f6bc4;
+  margin-top: auto;
+}
+
+.carousel-content {
+  padding: 20px 0;
+}
+
+.image-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.image-wrapper > div {
+  flex: 1;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.button-wrapper .dot {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: none;
+  outline: none;
+  appearance: none;
+  background-color: white;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.button-wrapper .dot.active {
+  opacity: 1;
+}
+
+#history {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("images/history-bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.history-content {
+  padding-top: 60px;
+}
+
+h2.big-h2 {
+  display: flex;
+  align-items: center;
+}
+
+h2.big-h2 span:first-child {
+  opacity: 50%;
+  font-size: 135px;
+  margin-right: -32px;
+}
+
+h2.big-h2 span:last-child {
+  margin-bottom: -32px;
+}
+
+.history-content p {
+  margin: 0 70px;
+}
+
+.team-content {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.tabs-wrapper {
+  background-color: #414f6b;
+}
+
+.tabs-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.tabs-list a {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: #b0b4be;
+  text-decoration: none;
+}
+
+.ui-tabs-active.ui-state-active a {
+  background-color: #b0b4be;
+  color: #414f6b;
+  text-decoration: underline;
+}
+
+.tab-content {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+#tab-1 {
+  background-image: url("images/mountain-1-bg.png");
+}
+#tab-2 {
+  background-image: url("images/mountain-2-bg.png");
+}
+
+#accordion {
+  display: none;
+}
+
+#accordion a {
+  padding: 20px;
+  background-color: #414f6b;
+  color: #b0b4be;
+  display: block;
+  text-decoration: none;
+}
+
+#accordion a.ui-accordion-header-active.ui-state-active {
+  background-color: #b0b4be;
+  color: #414f6b;
+  text-decoration: underline;
+}
+
+.schedule-content {
+  display: flex;
+  align-items: flex-start;
+  min-height: 600px;
+  padding: 30px;
+}
+
+.schedule-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 30px 40px;
+  margin-top: 70px;
+}
+
+.schedule-card h2 {
+  margin-bottom: 10px;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.schedule-grid:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #414f6b;
+  color: #63769d;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    gap: 20px;
+  }
+
+  #hero {
+    background-position: top left -220px;
+  }
+
+  .team-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #tabs {
+    display: none;
+  }
+
+  #accordion {
+    display: block;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
